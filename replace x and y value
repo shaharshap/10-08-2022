@@ -1,0 +1,37 @@
+ #include <stdio.h> 
+int main()
+{
+    int result = 0, multiply = 1,n,x,y;
+    printf( "enter n value:");
+    scanf( "%d",&n);
+    printf( "enter x and y value:\n");
+    scanf( "%d %d",&x,&y);
+    int rem;
+    while (n> 0)
+    {
+        int rem= n % 10;
+        if (rem==x)
+            result = result + y* multiply;
+        else 
+            result = result + rem* multiply;
+        multiply *= 10;
+        n= n/10; 
+    }
+    if (n==x)
+        result = result + y* multiply;
+    else 
+        result = result + n* multiply;
+    
+    printf( "%d\n",result);
+    
+
+    return 0;
+}
+  enter n value:16918
+enter x and y value:
+1 7
+76978
+ enter n value:12345
+enter x and y value:
+3 9
+12945
